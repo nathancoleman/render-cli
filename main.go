@@ -1,10 +1,7 @@
 package main
 
-import "github.com/nathancoleman/render-sdk-go"
+import "github.com/nathancoleman/render-cli/cmd"
 
 func main() {
-	_, err := render.NewClient(render.DefaultConfig())
-	if err != nil {
-		panic(err)
-	}
+	cmd.Execute()
 }

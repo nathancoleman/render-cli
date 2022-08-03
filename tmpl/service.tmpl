@@ -1,0 +1,11 @@
+ID:         {{ .ID }}
+Name:       {{ .Name }}
+Slug:       {{ .Slug }}
+Created:    {{ .CreatedAt | date }}
+Updated:    {{ .UpdatedAt | date }}
+
+AutoDeploy: {{ .AutoDeploy }}
+{{- if eq .AutoDeploy "yes" }}
+    Repo:   {{ .Repo }}
+    Branch: {{ .Branch }}
+{{- end}}

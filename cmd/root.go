@@ -2,9 +2,20 @@ package cmd
 
 import (
 	"os"
+	"text/template"
+	"time"
 
+	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 )
+
+var templates = template.Must(
+	template.New("").
+		Funcs(template.FuncMap{
+			"date":  func(t time.Time) string { return t.Format(time.RFC1123) },
+			"green": color.GreenString,
+		}).
+		ParseGlob("tmpl/*.tmpl"))
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{

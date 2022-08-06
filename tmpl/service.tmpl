@@ -5,7 +5,7 @@ Created:    {{ .CreatedAt | date }}
 Updated:    {{ .UpdatedAt | date }}
 
 AutoDeploy: {{ .AutoDeploy }}
-{{- if eq .AutoDeploy "yes" }}
+{{- if .AutoDeploy }}
     Repo:   {{ .Repo }}
     Branch: {{ .Branch }}
 {{- end}}

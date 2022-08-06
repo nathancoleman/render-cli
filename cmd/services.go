@@ -30,10 +30,7 @@ var servicesListCmd = &cobra.Command{
 			return err
 		}
 
-		templates.ExecuteTemplate(
-			os.Stdout,
-			"services.tmpl",
-			struct{ Services []render.Service }{services})
+		templates.ExecuteTemplate(os.Stdout, "services.tmpl", struct{ Services []render.Service }{services})
 
 		return nil
 	},
@@ -54,10 +51,7 @@ var servicesGetCmd = &cobra.Command{
 			return err
 		}
 
-		templates.ExecuteTemplate(
-			os.Stdout,
-			"service.tmpl",
-			service)
+		templates.ExecuteTemplate(os.Stdout, "service.tmpl", service)
 		return nil
 	},
 }

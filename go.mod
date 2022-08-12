@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/fatih/color v1.13.0
-	github.com/nathancoleman/render-sdk-go v0.0.0-20220806150456-5d7b7cdc63c4
+	github.com/nathancoleman/render-sdk-go v0.0.0-20220812231829-5bd7f72918ed
 	github.com/spf13/cobra v1.5.0
 )
 

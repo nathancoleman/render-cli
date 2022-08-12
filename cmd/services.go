@@ -46,7 +46,7 @@ var servicesGetCmd = &cobra.Command{
 			return err
 		}
 
-		service, err := client.Services().Retrieve(cmd.Context(), args[0])
+		service, err := client.Services().Get(cmd.Context(), args[0])
 		if err != nil {
 			return err
 		}

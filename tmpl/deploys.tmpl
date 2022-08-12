@@ -1,3 +1,3 @@
 {{- range .Deploys }}
-    {{- .ID | green }}
+    {{- .ID | green }}  {{ .Status }}    {{ .Commit.Message }}
 {{ end -}}
